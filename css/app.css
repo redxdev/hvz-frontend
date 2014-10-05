@@ -1,0 +1,33 @@
+.jumbotron.header {
+    background-color: black;
+}
+
+.jumbotron .container {
+    background-color: rgba(255, 255, 255, 0.57);
+}
+
+.navbar-lower {
+    top: -30px;
+}
+
+@media screen and (min-width:769px) {
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 300px;
+        text-align: center;
+    }
+
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -150px;
+    }
+
+    .navbar-brand-centered .logo-home {
+        position: relative;
+        top: -50px;
+        width: 150px;
+        height: 150px;
+    }
+}
