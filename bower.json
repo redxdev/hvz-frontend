@@ -1,0 +1,21 @@
+{
+  "name": "hvz-frontend",
+  "version": "2.0.0",
+  "homepage": "https://github.com/redxdev/hvz-frontend",
+  "authors": [
+    "Sam Bloomberg <sam@redxdev.com>"
+  ],
+  "description": "HvZ Frontend (standalone templates)",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "bootswatch": "~3.2.0+4"
+  }
+}

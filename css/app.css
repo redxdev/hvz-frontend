@@ -31,3 +31,19 @@
         height: 150px;
     }
 }
+
+.bg-human {
+    background-color: #ff7519;
+}
+
+.bg-zombie {
+    background-color: #31e636;
+}
+
+.large-text {
+    font-size: 200%;
+}
+
+.large-text h1 {
+    font-size: 325%;
+}
