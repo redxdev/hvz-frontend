@@ -1,6 +1,5 @@
 .jumbotron.header {
-    background: transparent no-repeat;
-    background-size: 100% auto;
+    background: transparent;
     position: relative;
 }
 

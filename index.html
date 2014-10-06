@@ -89,9 +89,8 @@
             </div>
         </div>
         <div class="row text-center">
-            <h1>There should be a chart here</h1>
-            <p>foo bar</p>
-            <p>baz</p>
+            <div id="tag-chart" class="col-md-12" style="height: 200px;">
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6 text-center">
@@ -137,5 +136,30 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <script src="bower_components/holderjs/holder.js"></script>
+
+    <script src="https://www.google.com/jsapi"></script>
+
+    <script>
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawTagChart);
+
+        function drawTagChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Time', '# Tags'],
+                ['Sunday 21:00', 25],
+                ['Sunday 22:00', 10],
+                ['Sunday 23:00', 5],
+                ['Monday 00:00', 10]
+            ]); // on live site will be done via call to REST API
+
+            var options = {
+                title: 'Tag Timeline',
+                hAxis: {title: 'Time', titleTextStyle: {color: 'red'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('tag-chart'));
+            chart.draw(data, options);
+        }
+    </script>
 </body>
 </html>
