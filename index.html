@@ -146,28 +146,29 @@
 
         function drawTagChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Time', '# Tags'],
-                ['21:00 Sunday', 25],
-                ['22:00 Sunday', 10],
-                ['23:00 Sunday', 5],
-                ['00:00 Monday', 1],
-                ['01:00 Monday', 1],
-                ['02:00 Monday', 1],
-                ['03:00 Monday', 1],
-                ['04:00 Monday', 1],
-                ['05:00 Monday', 3],
-                ['06:00 Monday', 7],
-                ['07:00 Monday', 10],
-                ['08:00 Monday', 20],
-                ['09:00 Monday', 13],
-                ['10:00 Monday', 4],
-                ['11:00 Monday', 8],
-                ['12:00 Monday', 3],
+                ['Time', '# Tags', {role: 'tooltip'}],
+                ['21:00', 25, 'Sunday 21:00 - 25 kills'],
+                ['22:00', 10, 'Sunday 22:00 - 10 kills'],
+                ['23:00', 5, 'Sunday 23:00 - 5 kills'],
+                ['00:00', 1, 'Monday 00:00 - 1 kills'],
+                ['01:00', 1, 'Monday 01:00 - 1 kills'],
+                ['02:00', 1, 'Monday 02:00 - 1 kills'],
+                ['03:00', 1, 'Monday 03:00 - 1 kills'],
+                ['04:00', 1, 'Monday 04:00 - 1 kills'],
+                ['05:00', 3, 'Monday 05:00 - 3 kills'],
+                ['06:00', 7, 'Monday 06:00 - 7 kills'],
+                ['07:00', 10, 'Monday 07:00 - 10 kills'],
+                ['08:00', 20, 'Monday 08:00 - 20 kills'],
+                ['09:00', 13, 'Monday 09:00 - 13 kills'],
+                ['10:00', 4, 'Monday 10:00 - 4 kills'],
+                ['11:00', 8, 'Monday 11:00 - 8 kills'],
+                ['12:00', 3, 'Monday 12:00 - 3 kills'],
             ]); // on the live site this will be done via a call to the REST API
 
             var options = {
                 title: 'Tag Timeline',
-                colors: ['black']
+                colors: ['black'],
+                legend: 'none'
             };
 
             var chart = new google.visualization.ColumnChart(document.getElementById('tag-chart'));
