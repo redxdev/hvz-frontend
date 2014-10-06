@@ -22,16 +22,19 @@
 <body>
     <!-- Jumbotron -->
     <div class="jumbotron header">
-        <div class="container text-center">
-            <div class="timer">
-                <h1>
-                    <strong>3</strong> days <strong>2</strong> hours <strong>5</strong> minutes <strong>34</strong> seconds
-                </h1>
-            </div>
+        <div class="video-container">
+            <video class="header-video" autoplay loop muted>
+                <source src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm"> <!-- I need a video of height 218 px or larger -->
+            </video>
+        </div>
+        <div class="container header-text text-center">
+            <h1>
+                <strong>3</strong> days <strong>2</strong> hours <strong>5</strong> minutes <strong>34</strong> seconds
+            </h1>
         </div>
     </div>
 
-    <div class="navbar navbar-inverse navbar-lower" role="navigation">
+    <div class="navbar navbar-default navbar-lower" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main-nav">
@@ -41,7 +44,7 @@
                 </button>
                 <div class="visible-lg visible-md navbar-brand navbar-brand-centered">
                     <a href="#">
-                        <img class="logo-home" src="holder.js/150x150" alt="HvZ @ RIT">
+                        <img class="logo-home" src="images/logo.png" alt="HvZ @ RIT">
                     </a>
                 </div>
                 <div class="visible-xs visible-sm navbar-brand">
@@ -51,7 +54,7 @@
 
             <div class="collapse navbar-collapse" id="navbar-main-nav">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Status</a></li>
+                    <li class="active"><a href="#">Status</a></li>
                     <li><a href="#">Rules</a></li>
                     <li><a href="#">Players</a></li>
                     <li><a href="#">Tags</a></li>

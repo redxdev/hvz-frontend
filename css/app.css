@@ -1,13 +1,30 @@
 .jumbotron.header {
-    background-color: black;
+    background: transparent no-repeat;
+    background-size: 100% auto;
+    position: relative;
 }
 
-.jumbotron .container {
+.header-text {
     background-color: rgba(255, 255, 255, 0.57);
 }
 
 .navbar-lower {
     top: -30px;
+}
+
+.header .video-container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
 }
 
 @media screen and (min-width:769px) {
