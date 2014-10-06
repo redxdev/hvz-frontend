@@ -58,9 +58,10 @@
                     <li><a href="#">Rules</a></li>
                     <li><a href="#">Players</a></li>
                     <li><a href="#">Tags</a></li>
-                    <li><a href="#">Map</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Spread</a></li>
+                    <li><a href="#">Map</a></li>
                     <li><a href="#">Register Tag</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
@@ -89,7 +90,10 @@
             </div>
         </div>
         <div class="row text-center">
-            <div id="tag-chart" class="col-md-12" style="height: 200px;">
+            <div id="tag-chart" class="hidden-sm hidden-xs col-md-12" style="height: 250px;">
+            </div>
+            <div class="visible-sm visible-xs col-md-12">
+                Use a desktop browser for cool charts!
             </div>
         </div>
         <div class="row">
@@ -149,12 +153,24 @@
                 ['Sunday 21:00', 25],
                 ['Sunday 22:00', 10],
                 ['Sunday 23:00', 5],
-                ['Monday 00:00', 10]
+                ['Monday 00:00', 1],
+                ['Monday 01:00', 1],
+                ['Monday 02:00', 1],
+                ['Monday 03:00', 1],
+                ['Monday 04:00', 1],
+                ['Monday 05:00', 3],
+                ['Monday 06:00', 7],
+                ['Monday 07:00', 10],
+                ['Monday 08:00', 20],
+                ['Monday 09:00', 13],
+                ['Monday 10:00', 4],
+                ['Monday 11:00', 8],
+                ['Monday 12:00', 3],
             ]); // on live site will be done via call to REST API
 
             var options = {
                 title: 'Tag Timeline',
-                hAxis: {title: 'Time', titleTextStyle: {color: 'red'}}
+                colors: ['black']
             };
 
             var chart = new google.visualization.ColumnChart(document.getElementById('tag-chart'));
