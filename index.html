@@ -90,10 +90,7 @@
             </div>
         </div>
         <div class="row text-center">
-            <div id="tag-chart" class="hidden-sm hidden-xs col-md-12" style="height: 250px;">
-            </div>
-            <div class="visible-sm visible-xs col-md-12">
-                Use a desktop browser for cool charts!
+            <div id="tag-chart" class="col-md-12" style="height: 250px;">
             </div>
         </div>
         <div class="row">
@@ -150,23 +147,23 @@
         function drawTagChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Time', '# Tags'],
-                ['Sunday 21:00', 25],
-                ['Sunday 22:00', 10],
-                ['Sunday 23:00', 5],
-                ['Monday 00:00', 1],
-                ['Monday 01:00', 1],
-                ['Monday 02:00', 1],
-                ['Monday 03:00', 1],
-                ['Monday 04:00', 1],
-                ['Monday 05:00', 3],
-                ['Monday 06:00', 7],
-                ['Monday 07:00', 10],
-                ['Monday 08:00', 20],
-                ['Monday 09:00', 13],
-                ['Monday 10:00', 4],
-                ['Monday 11:00', 8],
-                ['Monday 12:00', 3],
-            ]); // on live site will be done via call to REST API
+                ['21:00 Sunday', 25],
+                ['22:00 Sunday', 10],
+                ['23:00 Sunday', 5],
+                ['00:00 Monday', 1],
+                ['01:00 Monday', 1],
+                ['02:00 Monday', 1],
+                ['03:00 Monday', 1],
+                ['04:00 Monday', 1],
+                ['05:00 Monday', 3],
+                ['06:00 Monday', 7],
+                ['07:00 Monday', 10],
+                ['08:00 Monday', 20],
+                ['09:00 Monday', 13],
+                ['10:00 Monday', 4],
+                ['11:00 Monday', 8],
+                ['12:00 Monday', 3],
+            ]); // on the live site this will be done via a call to the REST API
 
             var options = {
                 title: 'Tag Timeline',
