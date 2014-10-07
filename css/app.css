@@ -1,3 +1,7 @@
+body.navbar-offset {
+    padding-top: 80px;
+}
+
 .jumbotron.header {
     background: transparent;
     position: relative;
@@ -40,11 +44,18 @@
         margin-left: -150px;
     }
 
-    .navbar-brand-centered .logo-home {
+    .navbar-lower .navbar-brand-centered .logo {
         position: relative;
         top: -50px;
         width: 150px;
         height: 150px;
+    }
+
+    .navbar-fixed-top .navbar-brand-centered .logo {
+        position: relative;
+        top: -10px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -62,4 +73,17 @@
 
 .large-text h1 {
     font-size: 325%;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.vertical-space {
+    height: 25px;
+}
+
+.vertical-space-sm {
+    height: 10px;
 }

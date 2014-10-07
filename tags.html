@@ -19,22 +19,8 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-    <!-- Jumbotron -->
-    <div class="jumbotron header">
-        <div class="video-container">
-            <video class="header-video" autoplay loop muted>
-                <source src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm"> <!-- I need a video of height 218 px or larger -->
-            </video>
-        </div>
-        <div class="container header-text text-center">
-            <h1>
-                <strong>3</strong> days <strong>2</strong> hours <strong>5</strong> minutes <strong>34</strong> seconds
-            </h1>
-        </div>
-    </div>
-
-    <div class="navbar navbar-default navbar-lower" role="navigation">
+<body class="navbar-offset">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main-nav">
@@ -54,9 +40,9 @@
 
             <div class="collapse navbar-collapse" id="navbar-main-nav">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Status</a></li>
+                    <li><a href="index.html">Status</a></li>
                     <li><a href="players.html">Players</a></li>
-                    <li><a href="tags.html">Tags</a></li>
+                    <li class="active"><a href="tags.html">Tags</a></li>
                     <li><a href="#">Spread</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -76,49 +62,22 @@
     </div>
 
     <div class="container">
+        <div class="vertical-space"></div>
+        <div class="vertical-space-sm"></div>
         <div class="row">
-            <div class="well col-md-5 text-center bg-human large-text">
-                <h1><strong>300</strong></h1>
-                Humans
-            </div>
-            <div class="col-md-2 text-center large-text">
-                <h1>VS</h1>
-            </div>
-            <div class="well col-md-5 text-center bg-zombie large-text">
-                <h1><strong>25</strong></h1>
-                Zombies
-            </div>
-        </div>
-        <div class="row text-center">
-            <div id="tag-chart" class="col-md-12" style="height: 250px;">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <h1>Recent Tags</h1>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-                <p><strong>Sam Bloomberg</strong> was tagged by <strong>John Doe</strong></p>
-            </div>
-            <div class="col-md-6 text-center">
-                <h1>Top Zombies</h1>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
-                <p><strong>Sam Bloomberg</strong> with <strong>21</strong> kills</p>
+            <div id="tag-list">
+                <div class="col-md-12 text-center">
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                </div>
             </div>
         </div>
     </div>
