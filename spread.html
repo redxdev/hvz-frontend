@@ -42,8 +42,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Status</a></li>
                     <li><a href="players.html">Players</a></li>
-                    <li class="active"><a href="tags.html">Tags</a></li>
-                    <li><a href="spread.html">Spread</a></li>
+                    <li><a href="tags.html">Tags</a></li>
+                    <li class="active"><a href="spread.html">Spread</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Map</a></li>
@@ -66,17 +66,7 @@
         <div class="vertical-space-sm"></div>
         <div class="row">
             <div id="tag-list">
-                <div class="col-md-12 text-center">
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
-                    <p><strong>John Doe</strong> killed <strong>Sam Bloomberg</strong> 5 hours ago</p>
+                <div id="spread-chart" class="col-md-12">
                 </div>
             </div>
         </div>
@@ -96,5 +86,36 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <script src="bower_components/holderjs/holder.js"></script>
+
+    <script src="https://www.google.com/jsapi"></script>
+
+    <script>
+        google.load("visualization", "1", {packages:["orgchart"]});
+        google.setOnLoadCallback(drawTagChart);
+
+        function drawTagChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Player', 'Zombie', 'tooltip'],
+                [{v:'0', f:'John Doe'}, '', 'Monday 21:00'],
+                [{v:'1', f:'Sam Bloomberg'}, '0', 'Monday 21:25'],
+                [{v:'2', f:'Thomas Jefferson'}, '0', 'Tuesday 10:00'],
+                [{v:'3', f:'George Washington'}, '1', 'Wednesday 19:00'],
+                [{v:'4', f:'Jane Doe'}, '2', 'Wednesday 19:25']
+            ]); // on the live site this will be done via a call to the REST API
+
+            var options = {
+                allowHtml: false,
+                allowCollapse: true,
+                size: 'small'
+            };
+
+            var chart = new google.visualization.OrgChart(document.getElementById('spread-chart'));
+            chart.draw(data, options);
+
+            $(window).resize(function() {
+                chart.draw(data, options);
+            });
+        }
+    </script>
 </body>
 </html>
